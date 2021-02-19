@@ -1,0 +1,6 @@
+{
+  "test_feature_story.py::TestLogin::test_login_failure_c": true,
+  "test_pytest1.py::test_answer": true,
+  "test_report_allure_demo1.py::test_broken": true,
+  "test_report_allure_demo1.py::test_failure": true
+}

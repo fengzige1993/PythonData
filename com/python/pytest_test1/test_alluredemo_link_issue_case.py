@@ -18,5 +18,6 @@ def test_with_testcase_link():
 @allure.issue('140','这是一个issue')
 def test_with_issue_link():
     pass
+@allure.issue('888','这是一个issue')
 def test_with_issue_link2():
     pass
