@@ -1,6 +1,5 @@
 """
 allure.attach 可以显示图片和html,可以补充测试、步骤或测试结果
-
 """
 import allure
 import pytest
@@ -15,3 +14,6 @@ def test_attach_html():
 def test_attach_photo():
     allure.attach.file("E:\PythonData\com\python\pytest_test1\resource\20210220.jpg",
                   name="这是一个图片",attachment_type=allure.attachment_type.JPG)
+def test_attach_photo_test():
+    print("test")
+    pass
