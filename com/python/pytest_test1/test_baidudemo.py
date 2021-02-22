@@ -1,10 +1,11 @@
 """
 selenium web UI 自动化测试验证
-feature（）--测试类的功能描述
+feature（）--测试case的功能描述
 allure.step（）--一个一个的操作步骤名称
 """
 import allure
 import pytest
+
 from selenium import  webdriver
 import time
 
