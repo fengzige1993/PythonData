@@ -1,4 +1,9 @@
 [
+  "sub_demo/check_demo.py::CheckDemo::check_a",
+  "sub_demo/check_demo.py::check_demo",
+  "sub_demo/check_demo.py::test_demo",
+  "sub_demo/test_sub_demo1.py::TestA::test_b",
+  "sub_demo/test_sub_demo1.py::test_a",
   "test_alluredemo_link_issue_case.py::test_with_issue_link",
   "test_alluredemo_link_issue_case.py::test_with_link",
   "test_alluredemo_link_issue_case.py::test_with_testcase_link",
