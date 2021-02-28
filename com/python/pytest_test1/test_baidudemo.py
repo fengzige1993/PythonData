@@ -16,7 +16,8 @@ import time
 def test_steps_demo(test_data1):
 
     with allure.step("打开百度网页"):
-        driver = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe")
+        # driver = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe")
+        driver = webdriver.Chrome()
         driver.get("http://www.baidu.com")
         driver.maximize_window()
     with allure.step("输入搜索词{}".format(test_data1)):
@@ -27,9 +28,9 @@ def test_steps_demo(test_data1):
         driver.find_element_by_id("su").click()
         time.sleep(2)
     with allure.step("保存图片"):
-        driver.save_screenshot("./result/b.png")
+        driver.save_screenshot("./result/c.png")
         #保存的图片放到测试用例里
-        allure.attach.file("./result/b.png",attachment_type=allure.attachment_type.PNG)
+        allure.attach.file("./result/c.png",attachment_type=allure.attachment_type.PNG)
         #添加html文本--首页
         allure.attach('<head></head><body>首页</body>','Attach with HTML type',allure.attachment_type.HTML)
     with allure.step("关闭浏览器"):

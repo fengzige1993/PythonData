@@ -1,4 +1,5 @@
 {
+  "test_assume.py::test_a": true,
   "test_attach.py::test_attach_photo": true,
   "test_calc.py::TestCalc::test_add[failed]": true,
   "test_calc.py::TestCalculator::test_add": true,
@@ -9,5 +10,7 @@
   "test_pytest1.py::test_answer": true,
   "test_report_allure_demo1.py::test_broken": true,
   "test_report_allure_demo1.py::test_failure": true,
+  "test_rerun.py::test_rerun1": true,
+  "test_rerun.py::test_rerun3": true,
   "test_test.py::TestCalc::test_add[failed]": true
 }
