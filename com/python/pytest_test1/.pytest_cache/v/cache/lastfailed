@@ -12,5 +12,6 @@
   "test_report_allure_demo1.py::test_failure": true,
   "test_rerun.py::test_rerun1": true,
   "test_rerun.py::test_rerun3": true,
+  "test_selenium_event_ActionChains.py::TestActionChains::test_keys": true,
   "test_test.py::TestCalc::test_add[failed]": true
 }

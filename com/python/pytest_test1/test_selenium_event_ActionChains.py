@@ -7,7 +7,7 @@ from selenium import webdriver
 from selenium.webdriver import ActionChains
 from time import sleep
 import pytest
-
+from selenium.webdriver.common.keys import Keys
 
 
 class TestActionChains():
@@ -49,6 +49,7 @@ class TestActionChains():
         sleep(2)
 
     #定义鼠标拖拽元素事件
+    @pytest.mark.skip
     def test_drag_drop(self):
         self.driver.get("http://sahitest.com/demo/dragDropMooTools.htm")
         drag_element = self.driver.find_element_by_id("dragger")
@@ -64,7 +65,17 @@ class TestActionChains():
         action.click_and_hold(drag_element).move_to_element(drop_element).release().perform()
         sleep(3)
 
-
+    def test_keys(self):
+        self.driver.get("http://sahitest.com/demo/label.htm")
+        ele = self.driver.find_element_by_xpath('/html/body/label[1]/input')
+        ele.click()
+        #定义ActionChains
+        action = ActionChains(self.driver)
+        action.send_keys("username").pause(1)
+        action.send_keys(Keys.SPACE).pause(1)
+        action.send_keys("tom").pause(1)
+        action.send_keys(Keys.BACK_SPACE).perform()
+        sleep(3)
 # if __name__ == '__main__':
 #     #可以在命令行里执行
 #     pytest.main(['-v','s','test_selenium_event_ActionChains.py'])
