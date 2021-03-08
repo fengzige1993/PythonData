@@ -1,4 +1,6 @@
 [
+  "selenium_frame_window/test_frame.py::TestFrame::test_frame",
+  "selenium_frame_window/test_window.py::TestWindows::test_window",
   "sub_demo/check_demo.py::CheckDemo::check_a",
   "sub_demo/check_demo.py::check_demo",
   "sub_demo/check_demo.py::test_demo",
