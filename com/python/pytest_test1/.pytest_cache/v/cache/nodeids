@@ -1,6 +1,8 @@
 [
   "selenium_frame_window/test_frame.py::TestFrame::test_frame",
   "selenium_frame_window/test_window.py::TestWindows::test_window",
+  "selenium_js/test_js.py::TestJs::test_datetime",
+  "selenium_js/test_js.py::TestJs::test_js_scroll",
   "sub_demo/check_demo.py::CheckDemo::check_a",
   "sub_demo/check_demo.py::check_demo",
   "sub_demo/check_demo.py::test_demo",

@@ -27,5 +27,5 @@ class TestWindows():
         self.driver.implicitly_wait(5)
         self.driver.maximize_window()
 
-    def teardowd(self):
+    def teardown(self):
         self.driver.quit()
