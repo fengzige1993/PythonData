@@ -98,5 +98,6 @@
   "test_test.py::TestCalc::test_div",
   "test_test.py::TestCalc::test_mul",
   "test_test.py::TestCalc::test_sub",
-  "test_test.py::test_a"
+  "test_test.py::test_a",
+  "web/selenium_po/test_case/test_contact.py::TestContact::test_addmember"
 ]
