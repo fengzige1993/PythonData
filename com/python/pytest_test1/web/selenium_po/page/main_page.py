@@ -17,9 +17,11 @@ class MainPage:
         option = Options()
         option.debugger_address = "127.0.0.1:9222"
         self.driver =  webdriver.Chrome(options=option)
-        self.driver.get("https://work.weixin.qq.com/wework_admin/frame")
-        # self.driver.maximize_window()
         self.driver.implicitly_wait(5)
+        #隐士等待放在创建driver之后，会贯串整个driver(即创建完driver之后，立刻设置隐式等待)
+        self.driver.get("https://work.weixin.qq.com/wework_admin/frame")
+
+
 
     def goto_add_member(self):
         """添加成员功能服务"""
