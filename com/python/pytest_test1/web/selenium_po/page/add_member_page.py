@@ -68,13 +68,27 @@ class AddMemberPage:
 
     def get_member(self):
         """获取所有的联系人姓名"""
-        WebDriverWait(self.driver,10).until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR,".member_colRight_memberTable_th_Checkbox")))
+
+        #查看页面是否有分页的元素
+        pages: str=self.driver.find_elements(By.CSS_SELECTOR,".ww_pageNav_info_text")
         #显式等待勾选框可以点击
+        WebDriverWait(self.driver,10).until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR,".member_colRight_memberTable_th_Checkbox")))
+        #拿到第一页所有的姓名元素,这里要用find_elements ,因为是取出的元素是列表数据，是一个集合，要用elements
         eles_list = self.driver.find_elements(By.CSS_SELECTOR,".member_colRight_memberTable_td:nth-child(2)")
-        #拿到所有的姓名元素,这里要用find_elements ,因为是取出的元素是列表数据，是一个集合，要用elements
-        names = []
         #把姓名的title文本属性取出放入list当中
+        names = []
         for ele in eles_list:
             names.append(ele.get_attribute("title"))
+        #如果找到有翻页的元素就去翻页
+        if len(pages) > 0:
+            page: str=self.driver.find_element(By.CSS_SELECTOR,".ww_pageNav_info_text").text
+            num, total = page.split("/")
+            # n = int(num)
+            t = int(total)
+            for  i in range(1, t+1):
+                self.driver.find_element(By.CSS_SELECTOR,".ww_commonImg_PageNavArrowRightNormal").click()
+                members_name_list = self.driver.find_elements(By.CSS_SELECTOR,".member_colRight_memberTable_td:nth-child(2)")
+                for pagelist in members_name_list:
+                    names.append(pagelist.get_attribute("title"))
         return names
         #返回列表中的全部姓名

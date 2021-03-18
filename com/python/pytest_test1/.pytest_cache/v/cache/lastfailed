@@ -15,5 +15,5 @@
   "test_selenium_event_ActionChains.py::TestActionChains::test_keys": true,
   "test_test.py::TestCalc::test_add[failed]": true,
   "web/selenium_po/test_case/test_contact.py": true,
-  "web/selenium_po/test_case/test_contact.py::TestContact::test_addmember": true
+  "web/selenium_po/test_case/test_paging.py": true
 }
