@@ -99,5 +99,7 @@
   "test_test.py::TestCalc::test_mul",
   "test_test.py::TestCalc::test_sub",
   "test_test.py::test_a",
-  "web/selenium_po/test_case/test_contact.py::TestContact::test_addmember"
+  "web/selenium_po/test_case/test_contact.py::TestContact::test_addmember",
+  "web/selenium_po/test_case/test_python_cmd.py::TestPythonCMD::test_cmd",
+  "web/selenium_po/test_case/test_python_cmd.py::test_cmd"
 ]
